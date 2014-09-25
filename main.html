@@ -1,0 +1,41 @@
+<script src="js/jquery.js"></script>
+<script>
+function Apple (type) {
+    this.type = type;
+    this.color = "red";
+}
+ 
+Apple.prototype.getInfo = function() {
+    return this.color + ' ' + this.type + ' apple';
+};
+
+function I(name) {
+    this.name = name;
+    this.am = new Am();
+}
+ 
+function Am(atts) {
+    if($.isArray(atts)){
+        this.atts = atts;
+    } else {
+        this.atts = new Array();
+    }
+}
+ 
+Am.prototype._ = function(attribute) {
+    this.atts.push(attribute);
+}
+
+Am.prototype.not = function(attribute) {
+    var index = this.atts.indexOf(attribute);
+    if( index > -1 ) {
+        this.atts.splice(index, 1);
+    }
+}
+
+Am.prototype.what = function() {
+    return this.atts;
+}
+
+var i = new I();
+</script>
