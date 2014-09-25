@@ -1,54 +1,10 @@
 <script src="js/jquery.js"></script>
+<script src="js/data.js"></script>
+<script src="js/noun.js"></script>
+<script src="js/nouns.js"></script>
+<script src="js/my.js"></script>
+<script src="js/i.js"></script>
+<script src="js/have.js"></script>
 <script>
-function I(name) {
-    this.name = name;
-    this.am = new Am();
-}
- 
-function Am(atts) {
-    if($.isArray(atts)){
-        this.atts = atts;
-    } else {
-        this.atts = new Array();
-    }
-}
- 
-Am.prototype._ = function(attribute) {
-    this.atts.push(attribute);
-    return this.atts;
-}
-
-Am.prototype.not = function(attribute) {
-    var index = this.atts.indexOf(attribute);
-    if( index > -1 ) {
-        this.atts.splice(index, 1);
-    }
-}
-
-Am.prototype.what = function() {
-    return this.atts;
-}
-
-function My(att) {
-    this.att = att;
-}
-
-function my(att) {
-    if( typeof(_my) == 'undefined' )
-        _my = new My();
-    _my.att = att;
-    return _my;
-}
-
-My.prototype.is = function(str) {
-    this[this.att] = str;
-    return this;
-}
-
-My.prototype.are = function(arr) {
-    i[this.att] = arr; 
-    return i;
-}
-
 var i = new I();
 </script>
