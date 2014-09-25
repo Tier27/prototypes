@@ -30,16 +30,23 @@ Am.prototype.what = function() {
 }
 
 function My(att) {
-   this.att = att;
+    this.att = att;
 }
 
 function my(att) {
-   m = new My(att);
-   return m;
+    if( typeof(_my) == 'undefined' )
+        _my = new My();
+    _my.att = att;
+    return _my;
 }
 
 My.prototype.is = function(str) {
-    i[this.att] = str;
+    this[this.att] = str;
+    return this;
+}
+
+My.prototype.are = function(arr) {
+    i[this.att] = arr; 
     return i;
 }
 
