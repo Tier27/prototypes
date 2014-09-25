@@ -1,14 +1,5 @@
 <script src="js/jquery.js"></script>
 <script>
-function Apple (type) {
-    this.type = type;
-    this.color = "red";
-}
- 
-Apple.prototype.getInfo = function() {
-    return this.color + ' ' + this.type + ' apple';
-};
-
 function I(name) {
     this.name = name;
     this.am = new Am();
@@ -36,6 +27,20 @@ Am.prototype.not = function(attribute) {
 
 Am.prototype.what = function() {
     return this.atts;
+}
+
+function My(att) {
+   this.att = att;
+}
+
+function my(att) {
+   m = new My(att);
+   return m;
+}
+
+My.prototype.is = function(str) {
+    i[this.att] = str;
+    return i;
 }
 
 var i = new I();
