@@ -24,6 +24,7 @@ function Am(atts) {
  
 Am.prototype._ = function(attribute) {
     this.atts.push(attribute);
+    return this.atts;
 }
 
 Am.prototype.not = function(attribute) {
